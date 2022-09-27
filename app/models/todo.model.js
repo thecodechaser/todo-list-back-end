@@ -5,7 +5,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     task: {
       type: Sequelize.STRING
-    }
+    },
+    completed: {
+      type: Sequelize.BOOLEAN,
+      defaultValue: false,
+    },
   });
 
   return Tutorial;
