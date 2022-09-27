@@ -1,0 +1,27 @@
+{
+  "name": "todo-list-back-end",
+  "version": "1.0.0",
+  "description": "Node.js Rest Apis with Express, Sequelize & PostgreSQL.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecodechaser/todo-list-back-end.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sequelize",
+    "postgresql",
+    "rest",
+    "api"
+  ],
+  "author": "thecodechaser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thecodechaser/todo-list-back-end/issues"
+  },
+  "homepage": "https://github.com/thecodechaser/todo-list-back-end#readme"
+}
