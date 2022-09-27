@@ -47,6 +47,31 @@ exports.findAll = (req, res) => {
     });
 };
 
+// Update a Tutorial by the id in the request
+exports.update = (req, res) => {
+  const id = req.params.id;
+
+  Todo.update(req.body, {
+    where: { id: id }
+  })
+    .then(num => {
+      if (num == 1) {
+        res.send({
+          message: "Todo was updated successfully."
+        });
+      } else {
+        res.send({
+          message: `Cannot update Todo with id=${id}. Maybe Todo was not found or req.body is empty!`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Error updating Todo with id=" + id
+      });
+    });
+};
+
 // Delete a Todo with the specified id in the request
 exports.delete = (req, res) => {
   const id = req.params.id;
