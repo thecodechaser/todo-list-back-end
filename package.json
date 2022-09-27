@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/thecodechaser/todo-list-back-end/issues"
   },
-  "homepage": "https://github.com/thecodechaser/todo-list-back-end#readme"
+  "homepage": "https://github.com/thecodechaser/todo-list-back-end#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
