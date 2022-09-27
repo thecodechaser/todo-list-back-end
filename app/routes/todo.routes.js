@@ -15,4 +15,8 @@ module.exports = app => {
   // Delete a Todo with id
   router.delete("/:id", todos.delete);
 
+  // Delete all Todos
+  router.delete("/", todos.deleteAll);
+
+  app.use('/api/todos', router);
 };
