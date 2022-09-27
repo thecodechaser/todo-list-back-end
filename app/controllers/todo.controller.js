@@ -29,3 +29,20 @@ exports.create = (req, res) => {
       });
     });
 };
+
+// Retrieve all Todos from the database.
+exports.findAll = (req, res) => {
+  const task = req.query.task;
+  var condition = task ? { task: { [Op.like]: `%${task}%` } } : null;
+
+  Todo.findAll({ where: condition })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving tutorials."
+      });
+    });
+};
