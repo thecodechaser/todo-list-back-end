@@ -12,4 +12,7 @@ module.exports = app => {
   // Update a Todo with id
   router.put("/:id", todos.update);
 
+  // Delete a Todo with id
+  router.delete("/:id", todos.delete);
+
 };
