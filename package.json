@@ -25,7 +25,11 @@
   },
   "homepage": "https://github.com/thecodechaser/todo-list-back-end#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.23.2"
   }
 }
