@@ -1,12 +1,13 @@
 module.exports = (sequelize, Sequelize) => {
-  const Tutorial = sequelize.define("todo", {
-    id: {
-      type: Sequelize.STRING
-    },
+  const Todo = sequelize.define("todo", {
     task: {
       type: Sequelize.STRING
-    }
+    },
+    completed: {
+      type: Sequelize.BOOLEAN,
+      defaultValue: false,
+    },
   });
 
-  return Tutorial;
+  return Todo;
 };
