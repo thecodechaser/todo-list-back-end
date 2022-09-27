@@ -14,6 +14,12 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// call sync method
+const db = require("./app/models");
+db.sequelize.sync({ force: true }).then(() => {
+  console.log("Drop and re-sync db.");
+});
+
 // simple route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to thecodechaser application." });
@@ -25,10 +31,4 @@ require("./app/routes/todo.routes")(app);
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
-});
-
-// call sync method
-const db = require("./app/models");
-db.sequelize.sync({ force: true }).then(() => {
-  console.log("Drop and re-sync db.");
 });
