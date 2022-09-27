@@ -9,5 +9,7 @@ module.exports = app => {
    // Retrieve all Todos
    router.get("/", todos.findAll);
 
- 
+  // Update a Todo with id
+  router.put("/:id", todos.update);
+
 };
