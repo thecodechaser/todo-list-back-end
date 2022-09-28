@@ -11,13 +11,13 @@ exports.create = (req, res) => {
     return;
   }
 
-  // Create a Tutorial
+  // Create a Todo
   const todo = {
     task: req.body.task,
     completed: req.body.completed ? req.body.completed : false
   };
 
-  // Save Tutorial in the database
+  // Save Todo in the database
   Todo.create(todo)
     .then(data => {
       res.send(data);
@@ -42,12 +42,12 @@ exports.findAll = (req, res) => {
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving tutorials."
+          err.message || "Some error occurred while retrieving todos."
       });
     });
 };
 
-// Update a Tutorial by the id in the request
+// Update a Todo by the id in the request
 exports.update = (req, res) => {
   const id = req.params.id;
 
